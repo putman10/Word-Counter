@@ -12,17 +12,17 @@ namespace WordCounter.Tests
         [TestMethod]
         public void GetSingleWord_StoreInputInString_SingleInput()
         {
-            string userInput = "Dog!";
+            string userInput = "Dog";
             MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Dog!", testMatchWord.GetSingleWord(userInput));
+            Assert.AreEqual("Dog", testMatchWord.RemoveSpacesandCharactersFromSingleWord(userInput));
         }
 
         [TestMethod]
         public void GetStringOfWords_StoreInputInString_MultipleInputs()
         {
-            string userInput = "Is your dog happ$y";
+            string userInput = "Is your dog happy";
             MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Is your dog happ$y", testMatchWord.GetSingleWord(userInput));
+            Assert.AreEqual("Is your dog happy", testMatchWord.RemoveCharactersFromStringWords(userInput));
         }
 
         [TestMethod]
@@ -42,6 +42,14 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
+        public void RemoveCharactersFromStringWords_TrueIfSpaces_int()
+        {
+            string userInput = "Is your dog happ$y";
+            MatchWord testMatchWord = new MatchWord();
+            Assert.AreEqual("Is your dog happy", testMatchWord.RemoveCharactersFromStringWords(userInput));
+        }
+
+        [TestMethod]
         public void ConvertSingleWordToLowerCase_ReturnLowercase_string()
         {
             string userInput = "Dog";
@@ -56,14 +64,6 @@ namespace WordCounter.Tests
             MatchWord testMatchWord = new MatchWord();
             Assert.AreEqual("is your dog happy", testMatchWord.ConvertStringOfWordsToLowerCase(userInput));
         }
-
-        //[TestMethod]
-        //public void RemoveCharactersFromStringWords_TrueIfSpaces_int()
-        //{
-        //    string userInput = "Is your dog happ$y";
-        //    MatchWord testMatchWord = new MatchWord();
-        //    Assert.AreEqual("Is your dog happy", testMatchWord.RemoveCharactersFromStringWords(userInput));
-        //}
 
         [TestMethod]
         public void Final_NumberOfInstances_int()

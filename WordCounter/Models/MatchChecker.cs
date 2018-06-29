@@ -7,18 +7,6 @@ namespace WordCounter
 {
     public class MatchWord
     {
-        public string GetSingleWord(string inputOne)
-        {
-            string singleInput = inputOne;
-            return singleInput;
-        }
-
-        public string GetStringOfWords(string inputTwo)
-        {
-            string wordsInput = inputTwo;
-            return wordsInput;
-        }
-
         public bool CheckSingleWordForSpaces(string inputOne)
         {
             bool wordHasSpace = inputOne.Contains(" ");
@@ -27,9 +15,23 @@ namespace WordCounter
 
         public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
         {
-            char[] charsToTrim = { ',', '{', ' ', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '='};        
+            char[] charsToTrim = { ',', '{', ' ', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=' };
             string singleInputWithoutCharacters = inputOne.Trim(charsToTrim);
             return singleInputWithoutCharacters;
+        }
+
+        public string RemoveCharactersFromStringWords(string inputTwo)
+        {
+            string[] chars = new string[] { ",", ".", "/", "!", "@", "#", "$", "%", "^", "&", "*", "'", "\"", ";", "_", "(", ")", ":", "|", "[", "]" };
+
+            for (int i = 0; i < chars.Length; i++)
+            {
+                if (inputTwo.Contains(chars[i]))
+                {
+                    inputTwo = inputTwo.Replace(chars[i], "");
+                }
+            }
+            return inputTwo;
         }
 
         public string ConvertSingleWordToLowerCase(string inputOne)
@@ -44,26 +46,13 @@ namespace WordCounter
             return lowerCaseInputTwo;
         }
 
-
-
-
-
-        //public string[] RemoveCharactersFromStringWords(string inputTwo)
-        //{
-        //    string lowerCaseInputTwo = inputTwo.ToLower();
-        //    string[] inputTwoArray = lowerCaseInputTwo.Split(' ');
-        //    char[] charsToTrim = { ',', '{', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=' };
-        //    string wordsInputWithoutCharacters = inputTwoArray.Replace(charsToTrim, 'd');
-        //    return wordsInputWithoutCharacters;
-        //}
-
         public int Final(string inputOne, string inputTwo)
         {
 
             var arr = inputTwo.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
             var count = Array.FindAll(arr, s => s.Equals(inputOne.Trim())).Length;
             return count;
-        
+
         }
     }
 }
