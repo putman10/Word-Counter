@@ -22,8 +22,15 @@ namespace WordCounter
         public bool CheckSingleWordForSpaces(string inputOne)
         {
             bool wordHasSpace = inputOne.Contains(" ");
-            Console.WriteLine(wordHasSpace); 
             return wordHasSpace;
+        }
+
+        public string CheckSingleWordForSpecCharacters(string inputOne)
+        {
+            char[] charsToTrim = { ',', '{', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '='};        
+            string singleInputWithoutCharacters = inputOne.Trim(charsToTrim);
+
+            return singleInputWithoutCharacters;
         }
     }
 }
