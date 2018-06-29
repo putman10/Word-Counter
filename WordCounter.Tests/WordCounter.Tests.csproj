@@ -13,6 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ModelTests\" />
+     <ProjectReference Include="..\WordCounter\WordCounter.csproj" />
   </ItemGroup>
 </Project>

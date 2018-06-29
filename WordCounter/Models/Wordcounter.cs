@@ -1,10 +1,12 @@
 ﻿using System;
-namespace WordCounter.Models
+namespace Counter
 {
-    public class WordCounter
+    public class MatchWord
     {
-        public WordCounter()
+        public string GetSingleWord(string inputOne)
         {
+            string singleInput = inputOne;
+            return singleInput;
         }
     }
 }
