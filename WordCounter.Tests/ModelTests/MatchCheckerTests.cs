@@ -45,7 +45,7 @@ namespace WordCounter.Tests
         {
             string userInput = "Dog! ";
             MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Dog ", testMatchWord.CheckSingleWordForSpecCharacters(userInput));
+            Assert.AreEqual("Dog  ", testMatchWord.CheckSingleWordForSpecCharacters(userInput));
         }
     }
 }
