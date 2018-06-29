@@ -25,23 +25,28 @@ namespace WordCounter
             return wordHasSpace;
         }
 
-        //public bool CheckSingleWordForSpecCharacters(string inputOne)
-        //{
-        //    char[] charsToTrim = { ',', '{', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '='};        
-
-        //    foreach(char character in charsToTrim)
-        //    {
-        //        bool wordHasCharacter = inputOne.Contains(character);
-        //        return true;
-        //    }
-        //}
-
         public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
         {
             char[] charsToTrim = { ',', '{', ' ', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '='};        
             string singleInputWithoutCharacters = inputOne.Trim(charsToTrim);
             return singleInputWithoutCharacters;
         }
+
+        public string ConvertSingleWordToLowerCase(string inputOne)
+        {
+            string lowerCaseInputOne = inputOne.ToLowerInvariant();
+            return lowerCaseInputOne;
+        }
+
+        public string ConvertStringOfWordsToLowerCase(string inputTwo)
+        {
+            string lowerCaseInputTwo = inputTwo.ToLowerInvariant();
+            return lowerCaseInputTwo;
+        }
+
+
+
+
 
         //public string[] RemoveCharactersFromStringWords(string inputTwo)
         //{
@@ -55,11 +60,9 @@ namespace WordCounter
         public int Final(string inputOne, string inputTwo)
         {
 
-            var arr = inputTwo.Split(new char[] { ' ', '.' });
+            var arr = inputTwo.Split(new char[] { ' ', '.', ',', ';', ':', '?', '!' });
             var count = Array.FindAll(arr, s => s.Equals(inputOne.Trim())).Length;
             return count;
-
-                
         
         }
     }

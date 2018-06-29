@@ -33,21 +33,28 @@ namespace WordCounter.Tests
             Assert.AreEqual(true, testMatchWord.CheckSingleWordForSpaces(userInput));
         }
 
-        //[TestMethod]
-        //public void CheckSingleWordForCharacters_TrueIfSpaces_int()
-        //{
-        //    string userInput = "Dog! ";
-        //    MatchWord testMatchWord = new MatchWord();
-        //    Console.WriteLine(testMatchWord.CheckSingleWordForSpecCharacters(userInput));
-        //    Assert.AreEqual(true, testMatchWord.CheckSingleWordForSpecCharacters(userInput));
-        //}
-
         [TestMethod]
         public void RemoveSpacesandCharactersFromSingleWord_TrueIfSpaces_int()
         {
             string userInput = "Dog! ";
             MatchWord testMatchWord = new MatchWord();
             Assert.AreEqual("Dog", testMatchWord.RemoveSpacesandCharactersFromSingleWord(userInput));
+        }
+
+        [TestMethod]
+        public void ConvertSingleWordToLowerCase_ReturnLowercase_string()
+        {
+            string userInput = "Dog";
+            MatchWord testMatchWord = new MatchWord();
+            Assert.AreEqual("dog", testMatchWord.ConvertSingleWordToLowerCase(userInput));
+        }
+
+        [TestMethod]
+        public void ConvertStringOfWordsToLowerCase_ReturnLowercase_string()
+        {
+            string userInput = "Is Your Dog a Happy Dog";
+            MatchWord testMatchWord = new MatchWord();
+            Assert.AreEqual("is your dog a happy dog", testMatchWord.ConvertStringOfWordsToLowerCase(userInput));
         }
 
         //[TestMethod]
