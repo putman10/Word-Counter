@@ -43,28 +43,23 @@ namespace WordCounter
             return singleInputWithoutCharacters;
         }
 
-        //public string RemoveCharactersFromStringWords(string inputTwo)
+        //public string[] RemoveCharactersFromStringWords(string inputTwo)
         //{
+        //    string lowerCaseInputTwo = inputTwo.ToLower();
+        //    string[] inputTwoArray = lowerCaseInputTwo.Split(' ');
         //    char[] charsToTrim = { ',', '{', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=' };
-        //    string wordsInputWithoutCharacters = inputTwo.Replace(charsToTrim, 'd');
+        //    string wordsInputWithoutCharacters = inputTwoArray.Replace(charsToTrim, 'd');
         //    return wordsInputWithoutCharacters;
         //}
 
-        public static int Final(string inputOne, string inputTwo)
+        public int Final(string inputOne, string inputTwo)
         {
-                //.CountStringOccurrences(s1, "Sam")
-            //int containsWord = inputTwo.Split(new[] { ','}).Count(s => s == inputOne);;
-            
 
-
-            int count = 0;
-            int i = 0;
-            while ((i = inputOne.IndexOf(inputTwo, i)) != -1)
-            {
-                i += inputTwo.Length;
-                count++;
-            }
+            var arr = inputTwo.Split(new char[] { ' ', '.' });
+            var count = Array.FindAll(arr, s => s.Equals(inputOne.Trim())).Length;
             return count;
+
+                
         
         }
     }
