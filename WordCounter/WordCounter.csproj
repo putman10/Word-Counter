@@ -10,5 +10,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\Wordcounter.cs" />
+    <Compile Remove="Models\EmptyClass.cs" />
   </ItemGroup>
 </Project>
