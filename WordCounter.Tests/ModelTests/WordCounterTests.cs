@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System;
+﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Counter;
+using WordCounter;
 
-namespace WordCounter.Tests.ModelTests
+namespace WordCounter.Tests
 {
     [TestClass]
     public class MatchWordTests
@@ -12,8 +11,8 @@ namespace WordCounter.Tests.ModelTests
         public void GetSingleWord_StoreInputInString_SingleInput()
         {
             string userInput = "Dog!";
-            MatchWord testCounter = new MatchWord();
-            Assert.AreEqual("Dog!", testCounter.GetSingleWord(userInput));
+            MatchWord testMatchWord = new MatchWord();
+            Assert.AreEqual("Dog!", testMatchWord.GetSingleWord(userInput));
         }
     }
 }
