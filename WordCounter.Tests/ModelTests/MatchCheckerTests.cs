@@ -30,5 +30,14 @@ namespace WordCounter.Tests
             MatchWord testMatchWord = new MatchWord();
             Assert.AreEqual(true, testMatchWord.CheckSingleWordForSpaces(userInput));
         }
+
+        [TestMethod]
+        public void CheckSingleWordForCharacters_TrueIfSpaces_int()
+        {
+            string userInput = "Dog! ";
+            MatchWord testMatchWord = new MatchWord();
+            Console.WriteLine(testMatchWord.CheckSingleWordForSpecCharacters(userInput));
+            Assert.AreEqual(true, testMatchWord.CheckSingleWordForSpecCharacters(userInput));
+        }
     }
 }
