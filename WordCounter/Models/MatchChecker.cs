@@ -7,11 +7,6 @@ namespace WordCounter
 {
     public class MatchWord
     {
-        public bool CheckSingleWordForSpaces(string inputOne)
-        {
-            bool wordHasSpace = inputOne.Contains(" ");
-            return wordHasSpace;
-        }
 
         public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
         {

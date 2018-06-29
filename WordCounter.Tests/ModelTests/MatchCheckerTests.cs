@@ -26,14 +26,6 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void CheckSingleWordForSpaces_TrueIfSpaces_bool()
-        {
-            string userInput = "Dog! ";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual(true, testMatchWord.CheckSingleWordForSpaces(userInput));
-        }
-
-        [TestMethod]
         public void RemoveSpacesandCharactersFromSingleWord_TrueIfSpaces_int()
         {
             string userInput = "Dog! ";
