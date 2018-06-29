@@ -12,5 +12,11 @@ namespace WordCounter
             string singleInput = inputOne;
             return singleInput;
         }
+
+        public string GetStringOfWords(string inputTwo)
+        {
+            string wordsInput = inputTwo;
+            return wordsInput;
+        }
     }
 }

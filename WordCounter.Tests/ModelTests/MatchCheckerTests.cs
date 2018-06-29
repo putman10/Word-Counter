@@ -14,5 +14,13 @@ namespace WordCounter.Tests
             MatchWord testMatchWord = new MatchWord();
             Assert.AreEqual("Dog!", testMatchWord.GetSingleWord(userInput));
         }
+
+        [TestMethod]
+        public void GetStringOfWords_StoreInputInString_MultipleInputs()
+        {
+            string userInput = "Is your dog happ$y";
+            MatchWord testMatchWord = new MatchWord();
+            Assert.AreEqual("Is your dog happ$y", testMatchWord.GetSingleWord(userInput));
+        }
     }
 }
