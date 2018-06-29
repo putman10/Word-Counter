@@ -41,11 +41,28 @@ namespace WordCounter.Tests
         //}
 
         [TestMethod]
-        public void CheckSingleWordForCharacters_TrueIfSpaces_int()
+        public void RemoveSpacesandCharactersFromSingleWord_TrueIfSpaces_int()
         {
-            string userInput = "Dog!!$";
+            string userInput = "Dog! ";
             MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Dog", testMatchWord.CheckSingleWordForSpecCharacters(userInput));
+            Assert.AreEqual("Dog", testMatchWord.RemoveSpacesandCharactersFromSingleWord(userInput));
+        }
+
+        //[TestMethod]
+        //public void RemoveCharactersFromStringWords_TrueIfSpaces_int()
+        //{
+        //    string userInput = "Is your dog happ$y";
+        //    MatchWord testMatchWord = new MatchWord();
+        //    Assert.AreEqual("Is your dog happy", testMatchWord.RemoveCharactersFromStringWords(userInput));
+        //}
+
+        [TestMethod]
+        public void Final_NumberOfInstances_int()
+        {
+            string userWord = "dog";
+            string userWords = "Is your dog a happy dog";
+            MatchWord testMatchWord = new MatchWord();
+            Assert.AreEqual(2, testMatchWord.Final(userWord, userWords));
         }
     }
 }
