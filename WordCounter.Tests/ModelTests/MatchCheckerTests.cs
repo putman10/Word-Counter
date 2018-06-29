@@ -22,5 +22,13 @@ namespace WordCounter.Tests
             MatchWord testMatchWord = new MatchWord();
             Assert.AreEqual("Is your dog happ$y", testMatchWord.GetSingleWord(userInput));
         }
+
+        [TestMethod]
+        public void CheckSingleWordForSpaces_TrueIfSpaces_bool()
+        {
+            string userInput = "Dog! ";
+            MatchWord testMatchWord = new MatchWord();
+            Assert.AreEqual(true, testMatchWord.CheckSingleWordForSpaces(userInput));
+        }
     }
 }

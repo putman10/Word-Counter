@@ -18,5 +18,12 @@ namespace WordCounter
             string wordsInput = inputTwo;
             return wordsInput;
         }
+
+        public bool CheckSingleWordForSpaces(string inputOne)
+        {
+            bool wordHasSpace = inputOne.Contains(" ");
+            Console.WriteLine(wordHasSpace); 
+            return wordHasSpace;
+        }
     }
 }
