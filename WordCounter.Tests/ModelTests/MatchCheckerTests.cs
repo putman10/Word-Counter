@@ -13,48 +13,48 @@ namespace WordCounter.Tests
         public void GetSingleWord_StoreInputInString_SingleInput()
         {
             string userInput = "Dog";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Dog", testMatchWord.RemoveSpacesandCharactersFromSingleWord(userInput));
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            Assert.AreEqual("Dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(userInput));
         }
 
         [TestMethod]
         public void GetStringOfWords_StoreInputInString_MultipleInputs()
         {
             string userInput = "Is your dog happy";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Is your dog happy", testMatchWord.RemoveCharactersFromStringWords(userInput));
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            Assert.AreEqual("Is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords(userInput));
         }
 
         [TestMethod]
         public void RemoveSpacesandCharactersFromSingleWord_TrueIfSpaces_int()
         {
             string userInput = "Dog! ";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Dog", testMatchWord.RemoveSpacesandCharactersFromSingleWord(userInput));
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            Assert.AreEqual("Dog", testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(userInput));
         }
 
         [TestMethod]
         public void RemoveCharactersFromStringWords_TrueIfSpaces_int()
         {
             string userInput = "Is your dog happ$y";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("Is your dog happy", testMatchWord.RemoveCharactersFromStringWords(userInput));
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            Assert.AreEqual("Is your dog happy", testRepeatCounter.RemoveCharactersFromStringWords(userInput));
         }
 
         [TestMethod]
         public void ConvertSingleWordToLowerCase_ReturnLowercase_string()
         {
             string userInput = "Dog";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("dog", testMatchWord.ConvertSingleWordToLowerCase(userInput));
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            Assert.AreEqual("dog", testRepeatCounter.ConvertSingleWordToLowerCase(userInput));
         }
 
         [TestMethod]
         public void ConvertStringOfWordsToLowerCase_ReturnLowercase_string()
         {
             string userInput = "Is Your Dog Happy";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("is your dog happy", testMatchWord.ConvertStringOfWordsToLowerCase(userInput));
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            Assert.AreEqual("is your dog happy", testRepeatCounter.ConvertStringOfWordsToLowerCase(userInput));
         }
 
         [TestMethod]
@@ -62,8 +62,8 @@ namespace WordCounter.Tests
         {
             string userWord = "dog";
             string userWords = "is your dog happy";
-            MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual(1, testMatchWord.Final(userWord, userWords));
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            Assert.AreEqual(1, testRepeatCounter.Final(userWord, userWords));
         }
     }
 }

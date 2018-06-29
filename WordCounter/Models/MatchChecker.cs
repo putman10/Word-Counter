@@ -5,7 +5,7 @@ using WordCounterMain;
 
 namespace WordCounter
 {
-    public class MatchWord
+    public class RepeatCounter
     {
 
         public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
