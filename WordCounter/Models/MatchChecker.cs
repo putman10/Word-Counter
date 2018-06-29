@@ -7,11 +7,12 @@ namespace WordCounter
 {
     public class RepeatCounter
     {
-
+        
         public string RemoveSpacesandCharactersFromSingleWord(string inputOne)
         {
             char[] charsToTrim = { ',', '{', ' ', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=' };
             string singleInputWithoutCharacters = inputOne.Trim(charsToTrim);
+            ConvertSingleWordToLowerCase(singleInputWithoutCharacters);
             return singleInputWithoutCharacters;
         }
 
@@ -26,6 +27,7 @@ namespace WordCounter
                     inputTwo = inputTwo.Replace(chars[i], "");
                 }
             }
+            ConvertStringOfWordsToLowerCase(inputTwo);
             return inputTwo;
         }
 

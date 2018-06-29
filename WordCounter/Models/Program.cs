@@ -1,4 +1,5 @@
 ﻿using System;
+using WordCounter;
 
 namespace WordCounterMain
 {
@@ -6,7 +7,12 @@ namespace WordCounterMain
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string initalInputOne = "Dog!";
+            string initalInputTwo = "Is your dog happ$y";
+            RepeatCounter testRepeatCounter = new RepeatCounter();
+            string inputOne = testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(initalInputOne);
+            string inputTwo = testRepeatCounter.RemoveCharactersFromStringWords(initalInputTwo);
+            testRepeatCounter.Final(inputOne, inputTwo);
         }
     }
 }
