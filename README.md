@@ -20,7 +20,6 @@
 | **Program converts string of words to lowercase new string for matching**| Input: "Is your dog happy" | Output: "is your dog happy" |
 | **Program checks list of words against singular word for a match**| Input: "dog | is your dog happy" | Output: "True" |
 | **If program finds match, program will return number of times matched word appears in string of words.**| Input: "dog | is your dog happy" | Output: "1" |
-| **Program returns “Singular” word, String of words and number of times matches appear.**| Input: "Dog | Is your dog happy | 1" | Output: "Dog | Is your dog happy | 1" |
 
 ## Setup/Contribution Requirements
 
