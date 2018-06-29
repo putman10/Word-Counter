@@ -52,9 +52,9 @@ namespace WordCounter.Tests
         [TestMethod]
         public void ConvertStringOfWordsToLowerCase_ReturnLowercase_string()
         {
-            string userInput = "Is Your Dog a Happy Dog";
+            string userInput = "Is Your Dog Happy";
             MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual("is your dog a happy dog", testMatchWord.ConvertStringOfWordsToLowerCase(userInput));
+            Assert.AreEqual("is your dog happy", testMatchWord.ConvertStringOfWordsToLowerCase(userInput));
         }
 
         //[TestMethod]
@@ -69,9 +69,9 @@ namespace WordCounter.Tests
         public void Final_NumberOfInstances_int()
         {
             string userWord = "dog";
-            string userWords = "Is your dog a happy dog";
+            string userWords = "is your dog happy";
             MatchWord testMatchWord = new MatchWord();
-            Assert.AreEqual(2, testMatchWord.Final(userWord, userWords));
+            Assert.AreEqual(1, testMatchWord.Final(userWord, userWords));
         }
     }
 }

@@ -18,8 +18,7 @@
 | **Program removes special characters from string of words (if exists)**| Input: "Is your dog happ$y" | Output: "Is your dog happy" |
 | **Program converts singular word to lowercase new string for matching**| Input: "Dog" | Output: "dog" |
 | **Program converts string of words to lowercase new string for matching**| Input: "Is your dog happy" | Output: "is your dog happy" |
-| **Program checks list of words against singular word for a match**| Input: "dog | is your dog happy" | Output: "True" |
-| **If program finds match, program will return number of times matched word appears in string of words.**| Input: "dog | is your dog happy" | Output: "1" |
+| **If program finds match, program will return number of times matched word appears in string of words.**| Input: "dog" | is your dog happy" | Output: "1" |
 
 ## Setup/Contribution Requirements
 
