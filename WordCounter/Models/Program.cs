@@ -10,9 +10,12 @@ namespace WordCounterMain
             string initalInputOne = "Dog!";
             string initalInputTwo = "Is your dog happ$y";
             RepeatCounter testRepeatCounter = new RepeatCounter();
-            string inputOne = testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(initalInputOne);
-            string inputTwo = testRepeatCounter.RemoveCharactersFromStringWords(initalInputTwo);
-            testRepeatCounter.Final(inputOne, inputTwo);
+            string inputOneScrub = testRepeatCounter.RemoveSpacesandCharactersFromSingleWord(initalInputOne);
+            string inputTwoScrub = testRepeatCounter.RemoveCharactersFromStringWords(initalInputTwo);
+            string inputOneForFinal = testRepeatCounter.ConvertSingleWordToLowerCase(inputOneScrub);
+            string inputTwoForFinal = testRepeatCounter.ConvertStringOfWordsToLowerCase(inputTwoScrub);
+            int numberOfOccurences = testRepeatCounter.Final(inputOneForFinal, inputTwoForFinal);
+            Console.WriteLine(numberOfOccurences);
         }
     }
 }
