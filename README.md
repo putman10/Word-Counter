@@ -11,7 +11,7 @@
 | :-------------     | :------------- | :------------- |
 | **User inputs singular word that is stored in a new string variable**| Input: "Dog!" | Output: "Dog!" |
 | **User inputs list of words to compare against singular word. List of words is stored in new string.**| Input: "Is your dog happ$y" | Output: "Is your dog happ$y" |
-| **Program checks that “singular” word input contains only one word**| Input: "Dog!" | Output: "Dog!" |
+| **Program checks that “singular” word input contains only one word**| Input: "Dog! " | Output: true |
 | **Program checks that “singular” word does not contain any special characters**| Input: "Dog!" | Output: "False" |
 | **Program checks that string of words does not contain any special characters**| Input: "Is your dog happ$y" | Output: "False" |
 | **Program removes any spaces and special characters from “singular” word (if exists)**| Input: "Dog!" | Output: "Dog" |
